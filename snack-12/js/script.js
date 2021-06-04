@@ -10,7 +10,7 @@ var result = '<strong> Lista di Invitati </strong> <br/>';
 
 // for 3 random Names
 for ( var i = 1; i<=3; i++) {
-    result += names [Math.floor(Math.random()*8)] + ' ' + surnames[Math.floor(Math.random()*5)] + '<br/>';
+    result += names [Math.floor(Math.random()*names.length)] + ' ' + surnames[Math.floor(Math.random()*surnames.length)] + '<br/>';
 }
 
 document.getElementById("result").innerHTML = result;
