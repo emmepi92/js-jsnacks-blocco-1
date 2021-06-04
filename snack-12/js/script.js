@@ -6,7 +6,7 @@ Gatsby vuole generare una falsa lista di 3 invitati.
 var names = ['Ottavio', 'Alfredo', 'Davide', 'Luca', 'Mattia', 'Anna', 'Maria', 'Angela'];
 var surnames = ['Rossi', 'Gialli', 'Biachi', 'Verdi', 'Nero'];
 
-var result = '<strong> Lista di Invitati </strong> <br/>';
+var result = '<strong> Gatsby\'s Guest List </strong> <br/>';
 
 // for 3 random Names
 for ( var i = 1; i<=3; i++) {
