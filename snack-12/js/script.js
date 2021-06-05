@@ -11,13 +11,19 @@ var guest = '';
 var name = '';
 var surname = '';
 var pushed = [];
+var maxGuest = parseInt(prompt('Quanti invitate fake desideri generare? (max 5)'));
+
+while (isNaN(maxGuest) || maxGuest > 5 ){
+    alert('Inserisci un numero compreso fra 1 e 5');
+    maxGuest = parseInt(prompt('Quanti invitate fake desideri generare? (max 5)'));
+}
 
 document.getElementById("list").innerHTML =  '<strong> Gatsby\'s Guest List </strong> <br/>';
 
 var result = '';
 
 // for 3 random Names
-while ( guestList.length < 3) {
+while ( guestList.length < maxGuest) {
     name = names[Math.floor(Math.random()*names.length)];
     surname = surnames[Math.floor(Math.random()*surnames.length)];
     guest = name + ' ' + surname;
