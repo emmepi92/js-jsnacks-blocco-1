@@ -13,9 +13,14 @@ var surname = '';
 var pushed = [];
 var maxGuests = parseInt(prompt('Quanti invitati fake desideri generare? (max 5)'));
 
-while (isNaN(maxGuests) || maxGuests > 5 ){
-    alert('Inserisci un numero compreso fra 1 e 5');
-    maxGuests = parseInt(prompt('Quanti invitati fake desideri generare? (max 5)'));
+while (isNaN(maxGuests) || maxGuests > 5 || maxGuests <= 0){
+    if (maxGuests === 0) {
+        alert('Lista vuota non accettata');
+        maxGuests = parseInt(prompt('Quanti invitati fake desideri generare? (max 5)'));
+    } else {
+        alert('Inserisci un numero compreso fra 1 e 5');
+        maxGuests = parseInt(prompt('Quanti invitati fake desideri generare? (max 5)'));
+    }
 }
 
 document.getElementById("list").innerHTML =  '<strong> Gatsby\'s Guest List </strong> <br/>';
