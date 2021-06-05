@@ -9,8 +9,8 @@ var outputHtml = document.getElementById("result");
 var numInput = (prompt("Inserisci un numero di 4 cifre"));
 var result = 0;
 
-while (numInput.length!==4) {
-    alert("Inserisci un numero di 4 cifre, non di piu");
+while ((numInput.length!==4) || (isNaN(numInput))) {
+    alert("Inserisci un numero composto solo da 4 cifre, niente lettere o simboli");
     numInput = (prompt("Inserisci un numero di 4 cifre"));    
 }
 
